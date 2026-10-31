@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nethra Shree — Aspiring AI &amp; ML Engineer | Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio of Nethra Shree, an aspiring AI &amp; ML engineer studying B.Tech at SRM Ramapuram, Chennai. Turning ideas into reality through technology, creativity, and code.">
+  <meta name="author" content="Nethra Shree">
+  <meta name="theme-color" content="#FCF9EA">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nethra Shree — Aspiring AI &amp; ML Engineerl">
+  <meta property="og:description" content="Student | Creative Thinker | Vibe Coder. Explore my academic journey, capabilities, and online presence.">
+  <meta property="og:url" content="https://nebula8002-lab.github.io/">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: EB Garamond (Headings), Source Serif 4 (Body), IBM Plex Mono (Labels/Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets (Loads from root, /css folder, or self-contained embedded styles) -->
+  <link rel="stylesheet" href="style.css" onerror="this.onerror=null;this.remove();">
+  <link rel="stylesheet" href="css/style.css" onerror="this.onerror=null;this.remove();">
+
+  <!-- Embedded Stylesheet: Guarantees 100% complete styling even if external CSS deployment fails -->
+  <style>
+/* ==========================================================================
+   NETHRA SHREE — PERSONAL PORTFOLIO
+   Refined Editorial Monochrome-Inspired Layout
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Custom Properties & Reset
+   -------------------------------------------------------------------------- */
+:root {
+  /* Strict Project Colour Palette */
+  --color-bg: #FCF9EA;          /* Warm Cream */
+  --color-hero: #DB9558;        /* Muted Caramel */
+  --color-sage: #A8BBA3;        /* Sage Green */
+  --color-border: #97A87A;      /* Olive Green */
+
+  /* Readability & Contrast-Compliant Tones derived from Palette */
+  --color-text-primary: #273625;   /* Deep Olive-Forest (Contrast ratio > 8.5:1 on #FCF9EA) */
+  --color-text-secondary: #485A46; /* Muted Sage-Olive (Contrast ratio > 5.2:1 on #FCF9EA) */
+  --color-caramel-accent: #C27D42; /* Deep Caramel for high-contrast interactive states */
+  --color-caramel-hover: #DB9558;  /* Caramel Hover */
+  --color-focus-ring: #DB9558;     /* Focus outline ring */
+  --color-input-bg: #FAF6E3;       /* Subtle warm cream tint for inputs */
+  --color-error: #B93829;          /* Accessible validation error */
+  --color-error-bg: #FBECE8;       /* Subtle error background */
+  --color-success: #386A39;        /* Accessible validation success */
+
+  /* Typography Stacks */
+  --font-display: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, 'Liberation Mono', monospace;
+
+  /* Editorial Layout Metrics */
+  --max-width: 1140px;
+  --rail-width: 260px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 4.5rem;
+  --spacing-2xl: 6.5rem;
+
+  /* Square-cornered components strictly */
+  --radius-none: 0px;
+}
+
+/* Universal Box Sizing & Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Accessibility & Skip Navigation
+   -------------------------------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-hero);
+  color: #FFFFFF;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  text-decoration: none;
+  font-weight: 500;
+  z-index: 9999;
+  border: 1px solid var(--color-border);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Container & Editorial Rail System
+   -------------------------------------------------------------------------- */
+.site-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    padding: 0 2.5rem;
+  }
+}
+
+/* Structured Horizontal Dividers */
+.editorial-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. Header & Navigation Rail
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(252, 249, 234, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+}
+
+.site-brand {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-hero);
+  border-radius: 0;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  padding: 0.25rem 0;
+  position: relative;
+  transition: color 0.18s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-hero);
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  width: 100%;
+}
+
+/* Mobile Nav Toggle */
+.mobile-nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    padding: 1.25rem 2rem;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Editorial Section Layout (Heading Rail & Shared Vertical Guide)
+   -------------------------------------------------------------------------- */
+.editorial-section {
+  padding: var(--spacing-xl) 0;
+  position: relative;
+  scroll-margin-top: 80px;
+}
+
+@media (min-width: 900px) {
+  .editorial-section {
+    display: grid;
+    grid-template-columns: var(--rail-width) 1fr;
+    gap: 3.5rem;
+    padding: var(--spacing-2xl) 0;
+  }
+}
+
+/* Narrow Heading Rail */
+.section-rail {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+  .section-rail {
+    margin-bottom: 0;
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(151, 168, 122, 0.4);
+  }
+}
+
+.section-index {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 900px) {
+  .section-heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* Main Content Column (aligned along shared vertical guide) */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.editorial-lead {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  margin-bottom: 1.75rem;
+  max-width: 65ch;
+}
+
+@media (min-width: 768px) {
+  .editorial-lead {
+    font-size: 1.35rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. SECTION 1 — HERO
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding: var(--spacing-xl) 0 var(--spacing-2xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding: var(--spacing-2xl) 0 8rem 0;
+  }
+}
+
+.hero-meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.75rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--color-border);
+  background-color: rgba(168, 187, 163, 0.12);
+}
+
+.hero-meta-badge .meta-pulse {
+  width: 7px;
+  height: 7px;
+  background-color: var(--color-hero);
+  display: inline-block;
+}
+
+/* Large Serif Heading in #DB9558 */
+.hero-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 7vw, 5.25rem);
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--color-hero);
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  max-width: 18ch;
+}
+
+.hero-supporting {
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  line-height: 1.55;
+  color: var(--color-text-primary);
+  max-width: 38ch;
+  margin-bottom: 1.5rem;
+}
+
+/* Small supporting line */
+.hero-tagline {
+  font-family: var(--font-mono);
+  font-size: clamp(0.875rem, 1.5vw, 1.05rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-tagline-item {
+  display: inline-block;
+}
+
+.hero-tagline-sep {
+  color: var(--color-border);
+}
+
+/* Hero Button Group */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+/* Square-cornered, thin-outlined buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1rem 1.85rem;
+  border-radius: var(--radius-none);
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+  min-height: 48px;
+  min-width: 160px;
+}
+
+.btn-primary {
+  background-color: var(--color-hero);
+  color: #FFFFFF;
+  border-color: var(--color-hero);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-caramel-accent);
+  border-color: var(--color-caramel-accent);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.btn-outline:hover {
+  background-color: rgba(168, 187, 163, 0.22);
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+.btn-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* --------------------------------------------------------------------------
+   7. SECTION 2 — ABOUT ME
+   -------------------------------------------------------------------------- */
+.about-text {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+  max-width: 60ch;
+}
+
+.about-highlight-box {
+  margin-top: 2.25rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--color-border);
+  background-color: rgba(168, 187, 163, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-highlight-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.about-highlight-quote {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   8. SECTION 3 — EDUCATION
+   -------------------------------------------------------------------------- */
+.education-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-entry {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.education-entry:first-child {
+  padding-top: 0;
+}
+
+.education-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.education-institution {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-text-primary);
+}
+
+.education-degree {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.meta-item {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.meta-badge {
+  background-color: rgba(168, 187, 163, 0.25);
+  border: 1px solid var(--color-border);
+  padding: 0.2rem 0.55rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   9. SECTION 4 — SKILLS
+   -------------------------------------------------------------------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill-card {
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+  background-color: rgba(252, 249, 234, 0.7);
+  border-radius: var(--radius-none);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.skill-card:hover {
+  background-color: rgba(168, 187, 163, 0.15);
+  border-color: var(--color-text-primary);
+}
+
+.skill-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.skill-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.skill-index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.08em;
+}
+
+.skill-desc {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   10. SECTION 5 — CONNECT WITH ME
+   -------------------------------------------------------------------------- */
+.social-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .social-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.social-link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.35rem 1.5rem;
+  border: 1px solid var(--color-border);
+  background-color: rgba(252, 249, 234, 0.8);
+  border-radius: var(--radius-none);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: all 0.2s ease;
+  min-height: 72px;
+}
+
+.social-link-card:hover {
+  background-color: rgba(168, 187, 163, 0.18);
+  border-color: var(--color-text-primary);
+}
+
+.social-item-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icon-box {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  background-color: rgba(168, 187, 163, 0.2);
+  color: var(--color-text-primary);
+}
+
+.social-icon-box svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-platform-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: block;
+}
+
+.social-handle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  display: block;
+}
+
+.social-arrow-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-secondary);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-link-card:hover .social-arrow-icon {
+  transform: translate(3px, -3px);
+  color: var(--color-hero);
+}
+
+/* --------------------------------------------------------------------------
+   11. SECTION 6 — CONTACT ME
+   -------------------------------------------------------------------------- */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact-lead {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  max-width: 50ch;
+}
+
+/* Direct Contact Info Pill / Card */
+.direct-contact-card {
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  background-color: rgba(168, 187, 163, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 600px) {
+  .direct-contact-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.direct-email-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.direct-email-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.direct-email-link {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--color-border);
+  transition: color 0.2s ease;
+  word-break: break-all;
+}
+
+.direct-email-link:hover {
+  color: var(--color-hero);
+  text-decoration-color: var(--color-hero);
+}
+
+.direct-email-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-sm {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.6rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  border-radius: var(--radius-none);
+  transition: all 0.2s ease;
+  min-height: 38px;
+}
+
+.btn-sm:hover {
+  background-color: var(--color-hero);
+  color: #FFFFFF;
+  border-color: var(--color-hero);
+}
+
+/* Minimal Outlined Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  position: relative;
+}
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-hint {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+/* Square inputs, thin border */
+.form-input,
+.form-textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  padding: 0.85rem 1rem;
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-none);
+  color: var(--color-text-primary);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-hero);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 1px var(--color-hero);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* Modern Web Guidance: Validate Input After Interaction (:user-invalid / :user-valid) */
+.form-input:user-invalid,
+.form-textarea:user-invalid,
+.form-input.user-invalid-fallback,
+.form-textarea.user-invalid-fallback {
+  border-color: var(--color-error);
+  background-color: var(--color-error-bg);
+}
+
+.form-input:user-valid,
+.form-textarea:user-valid,
+.form-input.user-valid-fallback,
+.form-textarea.user-valid-fallback {
+  border-color: var(--color-success);
+}
+
+/* Field error message */
+.field-error-msg {
+  display: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-error);
+  margin-top: 0.35rem;
+}
+
+/* Reveal error message only when user-invalid */
+.form-input:user-invalid ~ .field-error-msg,
+.form-textarea:user-invalid ~ .field-error-msg,
+.form-input.user-invalid-fallback ~ .field-error-msg,
+.form-textarea.user-invalid-fallback ~ .field-error-msg {
+  display: block;
+}
+
+.form-submit-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .form-submit-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.form-submit-btn {
+  background-color: var(--color-text-primary);
+  color: #FCF9EA;
+  border: 1px solid var(--color-text-primary);
+  padding: 1rem 2.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius-none);
+  transition: all 0.2s ease;
+  min-height: 48px;
+}
+
+.form-submit-btn:hover {
+  background-color: var(--color-hero);
+  border-color: var(--color-hero);
+  color: #FFFFFF;
+}
+
+.form-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-notice {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+/* Real Feedback Banner (Honest, never fake!) */
+.form-status-alert {
+  display: none;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--color-border);
+  background-color: rgba(168, 187, 163, 0.2);
+  margin-top: 1rem;
+}
+
+.form-status-alert.is-visible {
+  display: block;
+}
+
+.status-title {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.status-body {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   12. SECTION 7 — FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 4rem 0 3rem 0;
+  background-color: var(--color-bg);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-top {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.footer-motto {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.footer-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(151, 168, 122, 0.4);
+  border-bottom: 1px solid rgba(151, 168, 122, 0.4);
+}
+
+.footer-social-link {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-social-link:hover {
+  color: var(--color-hero);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.footer-back-to-top {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.footer-back-to-top:hover {
+  color: var(--color-hero);
+}
+
+/* Toast message for Copy Email feedback */
+.toast-notice {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-text-primary);
+  color: #FCF9EA;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(100px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  z-index: 9999;
+}
+
+.toast-notice.is-active {
+  transform: translateY(0);
+  opacity: 1;
+}
+  </style>
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Minimal Editorial Masthead -->
+  <header class="site-header" role="banner">
+    <div class="site-container header-inner">
+      <a href="#hero" class="site-brand" aria-label="Nethra Shree homepage">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Nethra Shree</span>
+      </a>
+
+      <button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span>Menu</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" role="navigation" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#connect" class="nav-link">Connect</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ====================================================================
+         SECTION 1 — HERO
+         ==================================================================== -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="site-container">
+        <div class="hero-meta-badge">
+          <span class="meta-pulse" aria-hidden="true"></span>
+          <span>B.Tech AI &amp; ML &bull; 2026–2030</span>
+        </div>
+
+        <h1 id="hero-title" class="hero-heading">Hello, I'm Nethra Shree.</h1>
+
+        <p class="hero-supporting">
+          I'm an aspiring AI &amp; ML engineer who enjoys turning ideas into reality through technology, creativity, and code.
+        </p>
+
+        <div class="hero-tagline">
+          <span class="hero-tagline-item">Student</span>
+          <span class="hero-tagline-sep" aria-hidden="true">/</span>
+          <span class="hero-tagline-item">Creative Thinker</span>
+          <span class="hero-tagline-sep" aria-hidden="true">/</span>
+          <span class="hero-tagline-item">Vibe Coder</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">
+            <span>Explore My Profile</span>
+            <span class="btn-arrow" aria-hidden="true">&darr;</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Get In Touch</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="site-container">
+      <hr class="editorial-divider" aria-hidden="true">
+
+      <!-- ====================================================================
+           SECTION 2 — ABOUT ME
+           ==================================================================== -->
+      <section id="about" class="editorial-section" aria-labelledby="about-title">
+        <div class="section-rail">
+          <span class="section-index" aria-hidden="true">01 / Profile</span>
+          <h2 id="about-title" class="section-heading">A Little About Me</h2>
+        </div>
+
+        <div class="section-content">
+          <p class="about-text">
+            I'm currently pursuing B.Tech in Artificial Intelligence and Machine Learning at SRM Ramapuram, Chennai. I enjoy exploring technology, experimenting with code, and bringing creative ideas to life. I'm passionate about learning, communicating, and growing through new experiences.
+          </p>
+
+          <div class="about-highlight-box">
+            <span class="about-highlight-label">Guiding Philosophy</span>
+            <blockquote class="about-highlight-quote">
+              "Curiosity leads to code. Creativity turns code into experiences."
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <hr class="editorial-divider" aria-hidden="true">
+
+      <!-- ====================================================================
+           SECTION 3 — EDUCATION
+           ==================================================================== -->
+      <section id="education" class="editorial-section" aria-labelledby="education-title">
+        <div class="section-rail">
+          <span class="section-index" aria-hidden="true">02 / Academic</span>
+          <h2 id="education-title" class="section-heading">My Education</h2>
+        </div>
+
+        <div class="section-content">
+          <div class="education-list">
+            <!-- Entry 1: SRM IST -->
+            <article class="education-entry" aria-labelledby="edu-srm-name">
+              <h3 id="edu-srm-name" class="education-institution">SRM Institute of Science and Technology</h3>
+              <p class="education-degree">B.Tech — Artificial Intelligence and Machine Learning</p>
+              <div class="education-meta">
+                <span class="meta-item">
+                  <span class="meta-badge">Duration</span>
+                  <time datetime="2026/2030">2026–2030</time>
+                </span>
+                <span class="meta-item">
+                  <span class="meta-badge">Location</span>
+                  <span>Ramapuram, Chennai</span>
+                </span>
+              </div>
+            </article>
+
+            <!-- Entry 2: DAV Girls School -->
+            <article class="education-entry" aria-labelledby="edu-dav-name">
+              <h3 id="edu-dav-name" class="education-institution">DAV Girls Senior Secondary School</h3>
+              <div class="education-meta">
+                <span class="meta-item">
+                  <span class="meta-badge">Location</span>
+                  <span>Gopalapuram, Chennai</span>
+                </span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="editorial-divider" aria-hidden="true">
+
+      <!-- ====================================================================
+           SECTION 4 — SKILLS
+           ==================================================================== -->
+      <section id="skills" class="editorial-section" aria-labelledby="skills-title">
+        <div class="section-rail">
+          <span class="section-index" aria-hidden="true">03 / Capabilities</span>
+          <h2 id="skills-title" class="section-heading">What I Bring</h2>
+        </div>
+
+        <div class="section-content">
+          <div class="skills-grid">
+            <!-- Skill 1 -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <h3 class="skill-title">Vibe Coding</h3>
+                <span class="skill-index" aria-hidden="true">01</span>
+              </div>
+              <p class="skill-desc">
+                Turning ideas into working digital experiences with AI-assisted coding tools.
+              </p>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <h3 class="skill-title">Communication</h3>
+                <span class="skill-index" aria-hidden="true">02</span>
+              </div>
+              <p class="skill-desc">
+                Expressing ideas clearly and collaborating with others.
+              </p>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <h3 class="skill-title">Creative Thinking</h3>
+                <span class="skill-index" aria-hidden="true">03</span>
+              </div>
+              <p class="skill-desc">
+                Exploring fresh approaches to everyday challenges.
+              </p>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <h3 class="skill-title">Problem Solving</h3>
+                <span class="skill-index" aria-hidden="true">04</span>
+              </div>
+              <p class="skill-desc">
+                Approaching challenges with curiosity and logical thinking.
+              </p>
+            </div>
+
+            <!-- Skill 5 -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <h3 class="skill-title">Adaptability</h3>
+                <span class="skill-index" aria-hidden="true">05</span>
+              </div>
+              <p class="skill-desc">
+                Learning and adjusting to new technologies.
+              </p>
+            </div>
+
+            <!-- Skill 6 -->
+            <div class="skill-card">
+              <div class="skill-header">
+                <h3 class="skill-title">Continuous Learning</h3>
+                <span class="skill-index" aria-hidden="true">06</span>
+              </div>
+              <p class="skill-desc">
+                Exploring new tools, concepts, and possibilities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="editorial-divider" aria-hidden="true">
+
+      <!-- ====================================================================
+           SECTION 5 — CONNECT WITH ME
+           ==================================================================== -->
+      <section id="connect" class="editorial-section" aria-labelledby="connect-title">
+        <div class="section-rail">
+          <span class="section-index" aria-hidden="true">04 / Online</span>
+          <h2 id="connect-title" class="section-heading">Find Me Online</h2>
+        </div>
+
+        <div class="section-content">
+          <div class="social-list">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/nethra-shree-834053423?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android"
+               class="social-link-card"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn profile of Nethra Shree (opens in a new tab)">
+              <div class="social-item-main">
+                <div class="social-icon-box" aria-hidden="true">
+                  <!-- LinkedIn SVG Icon -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="social-platform-name">LinkedIn</span>
+                  <span class="social-handle">nethra-shree</span>
+                </div>
+              </div>
+              <svg class="social-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/nebula8002-lab"
+               class="social-link-card"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="GitHub profile of Nethra Shree (opens in a new tab)">
+              <div class="social-item-main">
+                <div class="social-icon-box" aria-hidden="true">
+                  <!-- GitHub SVG Icon -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="social-platform-name">GitHub</span>
+                  <span class="social-handle">nebula8002-lab</span>
+                </div>
+              </div>
+              <svg class="social-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/nebula.yes?stkn=MW5nNjU4c2dpdDd4OA=="
+               class="social-link-card"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram profile of Nethra Shree (opens in a new tab)">
+              <div class="social-item-main">
+                <div class="social-icon-box" aria-hidden="true">
+                  <!-- Instagram SVG Icon -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="social-platform-name">Instagram</span>
+                  <span class="social-handle">nebula.yes</span>
+                </div>
+              </div>
+              <svg class="social-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <!-- LeetCode -->
+            <a href="https://leetcode.com/u/nethrashree"
+               class="social-link-card"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LeetCode profile of Nethra Shree (opens in a new tab)">
+              <div class="social-item-main">
+                <div class="social-icon-box" aria-hidden="true">
+                  <!-- LeetCode SVG Icon -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863 0-.714.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.649 1.837-.649s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.21 5.21 0 0 0-3.85-1.472c-1.42 0-2.793.57-3.824 1.587l-4.32 4.381A5.36 5.36 0 0 0 2 14.314c0 1.434.57 2.808 1.587 3.825l4.332 4.363A5.4 5.4 0 0 0 11.582 24c1.434 0 2.808-.57 3.825-1.587l2.697-2.607c.514-.514.496-1.365-.039-1.901-.535-.535-1.448-.489-1.963.025zm2.842-7.854H7.954c-.743 0-1.345.602-1.345 1.345 0 .743.602 1.345 1.345 1.345h10.99c.743 0 1.345-.602 1.345-1.345 0-.743-.602-1.345-1.345-1.345z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="social-platform-name">LeetCode</span>
+                  <span class="social-handle">nethrashree</span>
+                </div>
+              </div>
+              <svg class="social-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="editorial-divider" aria-hidden="true">
+
+      <!-- ====================================================================
+           SECTION 6 — CONTACT ME
+           ==================================================================== -->
+      <section id="contact" class="editorial-section" aria-labelledby="contact-title">
+        <div class="section-rail">
+          <span class="section-index" aria-hidden="true">05 / Contact</span>
+          <h2 id="contact-title" class="section-heading">Let's Connect.</h2>
+        </div>
+
+        <div class="section-content">
+          <div class="contact-container">
+            <p class="contact-lead">
+              Have an idea, opportunity, or just want to say hello? I'd love to hear from you.
+            </p>
+
+            <!-- Direct Contact Card with Real Clickable Email & Clipboard Action -->
+            <div class="direct-contact-card">
+              <div class="direct-email-info">
+                <span class="direct-email-label">Direct Email</span>
+                <a href="mailto:nebula8002@gmail.com" class="direct-email-link">nebula8002@gmail.com</a>
+              </div>
+              <div class="direct-email-actions">
+                <button type="button" class="btn-sm" id="copy-email-btn" aria-label="Copy email address to clipboard">
+                  Copy Email
+                </button>
+              </div>
+            </div>
+
+            <!-- Minimal Outlined Contact Form with Modern Web Guidance Validation -->
+            <form id="contact-form" class="contact-form" novalidate>
+              <!-- Name Field -->
+              <div class="form-group">
+                <label for="name" class="form-label">
+                  <span>Name</span>
+                  <span class="form-hint" id="name-hint">Required</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  required
+                  minlength="2"
+                  autocomplete="name"
+                  aria-describedby="name-hint"
+                  aria-errormessage="name-error"
+                  placeholder="Your full name"
+                >
+                <div id="name-error" class="field-error-msg" role="alert">
+                  Please enter your name (minimum 2 characters).
+                </div>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  <span>Email Address</span>
+                  <span class="form-hint" id="email-hint">Format: you@example.com</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  required
+                  autocomplete="email"
+                  aria-describedby="email-hint"
+                  aria-errormessage="email-error"
+                  placeholder="you@domain.com"
+                >
+                <div id="email-error" class="field-error-msg" role="alert">
+                  Please provide a valid email address.
+                </div>
+              </div>
+
+              <!-- Subject Field -->
+              <div class="form-group">
+                <label for="subject" class="form-label">
+                  <span>Subject</span>
+                  <span class="form-hint" id="subject-hint">Required</span>
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-input"
+                  required
+                  minlength="3"
+                  aria-describedby="subject-hint"
+                  aria-errormessage="subject-error"
+                  placeholder="What would you like to discuss?"
+                >
+                <div id="subject-error" class="field-error-msg" role="alert">
+                  Please enter a subject (minimum 3 characters).
+                </div>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="message" class="form-label">
+                  <span>Message</span>
+                  <span class="form-hint" id="message-hint">Required</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="form-textarea"
+                  required
+                  minlength="10"
+                  aria-describedby="message-hint"
+                  aria-errormessage="message-error"
+                  placeholder="Write your message here..."
+                ></textarea>
+                <div id="message-error" class="field-error-msg" role="alert">
+                  Please enter your message (at least 10 characters).
+                </div>
+              </div>
+
+              <!-- Submit Button & Guidance Note -->
+              <div class="form-submit-row">
+                <button type="submit" class="form-submit-btn" id="submit-btn">
+                  Send Message
+                </button>
+                <p class="form-notice">
+                  Submitting directly prepares and launches your message to <strong>nebula8002@gmail.com</strong>.
+                </p>
+              </div>
+
+              <!-- Functional Feedback Box (Honest status, zero fake promises) -->
+              <div id="form-status-alert" class="form-status-alert" role="status" aria-live="polite">
+                <div class="status-title" id="status-title"></div>
+                <div class="status-body" id="status-body"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ====================================================================
+       SECTION 7 — FOOTER
+       ==================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-container footer-content">
+      <div class="footer-top">
+        <div class="footer-name">Nethra Shree</div>
+        <div class="footer-motto">Learning. Creating. Growing.</div>
+      </div>
+
+      <div class="footer-social-links" aria-label="Footer Social Navigation">
+        <a href="https://www.linkedin.com/in/nethra-shree-834053423?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android"
+           class="footer-social-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <a href="https://github.com/nebula8002-lab"
+           class="footer-social-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href="https://www.instagram.com/nebula.yes?stkn=MW5nNjU4c2dpdDd4OA=="
+           class="footer-social-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          Instagram
+        </a>
+        <a href="https://leetcode.com/u/nethrashree"
+           class="footer-social-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          LeetCode
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Nethra Shree. All rights reserved.</p>
+        <a href="#hero" class="footer-back-to-top" aria-label="Return to top of page">
+          <span>Back to Top</span>
+          <span aria-hidden="true">&uarr;</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: External script with embedded fallback (runs seamlessly whether files are deployed or not) -->
+  <script src="main.js" onerror="this.onerror=null;this.remove();"></script>
+  <script src="js/main.js" onerror="this.onerror=null;this.remove();"></script>
+  <script>
+/* Self-contained Interaction Logic (Guarded against duplicate execution) */
+if (!window.__NETHRA_PORTFOLIO_INITIALIZED__) {
+  window.__NETHRA_PORTFOLIO_INITIALIZED__ = true;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initMobileNav();
+    initFormValidationAndSubmission();
+    initCopyEmailActions();
+    initAriaInvalidSync();
+  });
+
+  function initMobileNav() {
+    const toggleBtn = document.querySelector('.mobile-nav-toggle');
+    const navMenu = document.getElementById('primary-nav');
+
+    if (!toggleBtn || !navMenu) return;
+
+    toggleBtn.addEventListener('click', () => {
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+      navMenu.classList.toggle('is-open');
+    });
+
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('is-open');
+      });
+    });
+  }
+
+  function initFormValidationAndSubmission() {
+    const form = document.getElementById('contact-form');
+    const statusAlert = document.getElementById('form-status-alert');
+    const statusTitle = document.getElementById('status-title');
+    const statusBody = document.getElementById('status-body');
+
+    if (!form) return;
+
+    const recipientEmail = 'nebula8002@gmail.com';
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const subjectInput = document.getElementById('subject');
+      const messageInput = document.getElementById('message');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const subject = subjectInput ? subjectInput.value.trim() : '';
+      const message = messageInput ? messageInput.value.trim() : '';
+
+      const emailSubject = encodeURIComponent(`Portfolio Inquiry: ${subject}`);
+      const emailBody = encodeURIComponent(
+        `Hello Nethra,\n\n${message}\n\n---\nFrom: ${name}\nReply-To: ${email}`
+      );
+
+      const mailtoUrl = `mailto:${recipientEmail}?subject=${emailSubject}&body=${emailBody}`;
+
+      try {
+        window.location.href = mailtoUrl;
+      } catch (e) {
+        console.warn('Mailto link navigation:', e);
+      }
+
+      if (statusAlert && statusTitle && statusBody) {
+        statusTitle.textContent = 'Opening Your Email Client';
+        statusBody.innerHTML = `
+          Your message has been formatted and opened in your system's email application directed to <strong>${recipientEmail}</strong>.<br><br>
+          If an email client did not open automatically, you can email <a href="mailto:${recipientEmail}" class="direct-email-link">${recipientEmail}</a> or use the button below to copy your drafted message.
+          <div style="margin-top: 1rem;">
+            <button type="button" class="btn-sm" id="copy-draft-btn">Copy Formatted Draft</button>
+          </div>
+        `;
+        statusAlert.classList.add('is-visible');
+
+        const copyDraftBtn = document.getElementById('copy-draft-btn');
+        if (copyDraftBtn) {
+          copyDraftBtn.addEventListener('click', () => {
+            const draftText = `To: ${recipientEmail}\nSubject: Portfolio Inquiry: ${subject}\n\nHello Nethra,\n\n${message}\n\nFrom: ${name} (${email})`;
+            copyToClipboard(draftText, 'Draft copied to clipboard! You can paste it into your email.');
+          });
+        }
+      }
+    });
+  }
+
+  function initCopyEmailActions() {
+    const copyBtn = document.getElementById('copy-email-btn');
+    const emailToCopy = 'nebula8002@gmail.com';
+
+    if (!copyBtn) return;
+
+    copyBtn.addEventListener('click', () => {
+      copyToClipboard(emailToCopy, 'Email copied: nebula8002@gmail.com');
+    });
+  }
+
+  function copyToClipboard(text, message) {
+    if (navigator && navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(message);
+      }).catch(() => {
+        fallbackCopy(text, message);
+      });
+    } else {
+      fallbackCopy(text, message);
+    }
+  }
+
+  function fallbackCopy(text, message) {
+    try {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.setAttribute('readonly', '');
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      textArea.style.top = '-9999px';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      const successful = document.execCommand('copy');
+      document.body.removeChild(textArea);
+      if (successful) {
+        showToast(message);
+      }
+    } catch (err) {
+      console.warn('Clipboard fallback not supported:', err);
+    }
+  }
+
+  let toastTimeout;
+  function showToast(message) {
+    let toast = document.getElementById('toast-notice');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'toast-notice';
+      toast.className = 'toast-notice';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+
+    toast.textContent = message;
+    toast.classList.add('is-active');
+
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove('is-active');
+    }, 3500);
+  }
+
+  function initAriaInvalidSync() {
+    const updateAriaState = (event) => {
+      const input = event.target;
+      if (!input || !input.matches || !input.matches('input, textarea, select')) return;
+
+      let isUserInvalid = false;
+      try {
+        isUserInvalid = input.matches(':user-invalid');
+      } catch {
+        isUserInvalid = input.classList.contains('user-invalid-fallback');
+      }
+
+      if (isUserInvalid) {
+        input.setAttribute('aria-invalid', 'true');
+      } else {
+        input.removeAttribute('aria-invalid');
+      }
+    };
+
+    document.addEventListener('blur', updateAriaState, true);
+    document.addEventListener('focus', updateAriaState, true);
+
+    document.addEventListener('input', (event) => {
+      const input = event.target;
+      if (!input || !input.matches || !input.matches('input, textarea, select')) return;
+
+      if (input.getAttribute('aria-invalid') === 'true') {
+        updateAriaState(event);
+      }
+    });
+
+    const supportsNativeUserInvalid = (typeof CSS !== 'undefined' && CSS.supports && CSS.supports('selector(:user-invalid)'));
+    if (!supportsNativeUserInvalid) {
+      const dirtyState = new WeakMap();
+
+      const handleFallbackEvent = (event) => {
+        const input = event.target;
+        if (!input || !input.matches || !input.matches('input, textarea, select')) return;
+
+        const isValid = typeof input.checkValidity === 'function' ? input.checkValidity() : true;
+        const state = dirtyState.get(input) || { hasInteracted: false, hasBlurred: false };
+
+        if (event.type === 'input' || event.type === 'change') {
+          state.hasInteracted = true;
+        } else if (event.type === 'blur') {
+          state.hasBlurred = true;
+        }
+
+        dirtyState.set(input, state);
+
+        if (state.hasBlurred && state.hasInteracted) {
+          input.classList.toggle('user-invalid-fallback', !isValid);
+          input.classList.toggle('user-valid-fallback', isValid);
+          if (!isValid) {
+            input.setAttribute('aria-invalid', 'true');
+          } else {
+            input.removeAttribute('aria-invalid');
+          }
+        }
+      };
+
+      document.addEventListener('blur', handleFallbackEvent, true);
+      document.addEventListener('input', handleFallbackEvent, true);
+      document.addEventListener('change', handleFallbackEvent, true);
+    }
+  }
+}
+  </script>
+</body>
+</html>
+

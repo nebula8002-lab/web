@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "routes": [
+    {
+      "src": "/css/style.css",
+      "dest": "/css/style.css"
+    },
+    {
+      "src": "/style.css",
+      "dest": "/style.css"
+    },
+    {
+      "src": "/js/main.js",
+      "dest": "/js/main.js"
+    },
+    {
+      "src": "/main.js",
+      "dest": "/main.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
+
